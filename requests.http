@@ -1,0 +1,73 @@
+### 
+POST http://localhost:9000/api/salas HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "sala 4",
+    "descripcion": "Para agasajo3"
+   
+}
+
+### 
+GET http://localhost:9000/api/salas HTTP/1.1
+Content-Type: application/json
+    
+### 
+GET http://localhost:9000/api/salas/62668b6ed9001c301a0c3cf8 HTTP/1.1
+
+### 
+PUT http://localhost:9000/api/salas/62668b6ed9001c301a0c3cf8 HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Sala Vip 2",
+    "descripcion": "Reunion de Gerentes"
+
+}
+
+### 
+DELETE  http://localhost:9000/api/salas/6265d1ddc6aab60b2ff9d52a HTTP/1.1
+
+
+
+###
+POST http://localhost:9000/api/reservas HTTP/1.1
+Content-Type: application/json
+
+{
+    "fecha": "19/04/2022",
+    "horaInicio": 10,
+    "horaFin": 13,
+    "responsable": "Juan Perez",
+    "cantidadPersonas": 15,
+    "descripcion" : "Desayuno Inicio Proyecto Gamma",
+    "sala" : "62669152972cd6fda46b99f1"
+   
+}
+
+### get all
+GET http://localhost:9000/api/reservas HTTP/1.1
+
+### get One
+GET http://localhost:9000/api/reservas/62668eb0db808b2425874695 HTTP/1.1
+
+
+### update
+PUT http://localhost:9000/api/reservas/62668eb0db808b2425874695 HTTP/1.1
+Content-Type: application/json
+
+{   
+    "fecha": "01/01/2022",
+    "horaInicio": 16,
+    "horaFin": 14,
+    "responsable": "Carla Diaz",
+    "cantidadPersonas": 10,
+    "descripcion" : "Charlas grupales",
+    "sala" : "62668b45d9001c301a0c3cf6"
+}
+
+### delete
+DELETE  http://localhost:9000/api/reservas/6266e99837882dd83e5c2acd HTTP/1.1
+
+### get reservas x sala
+GET http://localhost:9000/api/reservas/sala/62669152972cd6fda46b99f1
